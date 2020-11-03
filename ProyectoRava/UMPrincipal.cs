@@ -19,7 +19,9 @@ namespace ProyectoRava
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Inventario inventario = new Inventario();
+            inventario.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
