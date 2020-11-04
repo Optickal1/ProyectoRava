@@ -33,7 +33,7 @@ namespace ProyectoRava
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             bool blnfound = false;//Booleano que indica la existencia de datos, por default es falso
             NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=lalitoness12;Database=Rava_Sandwich");//Datos de conexion a la BD
@@ -45,8 +45,8 @@ namespace ProyectoRava
             if (dr.Read())//Si hay datos
             {
                 blnfound = true;//la existencia de datos es verdadera
-                UMPrincipal mu = new UMPrincipal(); //Crea un objeto del menú
-                mu.Show();// invoca la ventana del menú
+                UMPrincipal ump = new UMPrincipal(); //Crea un objeto del menú
+                ump.Show();// invoca la ventana del menú
                 this.Hide();//Oculta la ventana del login
             }
 

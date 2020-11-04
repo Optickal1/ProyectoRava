@@ -26,8 +26,8 @@ namespace ProyectoRava
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Login l = new Login();
-            l.Show();
+            Login login = new Login();
+            login.Show();
             this.Close();
         }
     }

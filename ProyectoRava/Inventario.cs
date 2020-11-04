@@ -27,7 +27,7 @@ namespace ProyectoRava
             //No se que hace xd
             comm.CommandType = CommandType.Text;
             //Consulta
-            comm.CommandText = "SELECT * FROM Productos";
+            comm.CommandText = "SELECT * FROM Inventario";
             //Leer BD
             NpgsqlDataReader dr = comm.ExecuteReader();
             if (dr.HasRows)//Si la tabla tiene 1 o más filas...
@@ -43,6 +43,25 @@ namespace ProyectoRava
             comm.Dispose();
             //Desconectar BD
             conn.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UMPrincipal ump = new UMPrincipal();
+            ump.Show();
+            this.Close();
+        }
+
+        private void btnIngreso_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
