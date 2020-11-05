@@ -30,4 +30,6 @@ O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\bin\Debug\System.Text.Json.xml
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\bin\Debug\System.Threading.Tasks.Extensions.xml
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\bin\Debug\System.ValueTuple.xml
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.csproj.CopyComplete
-O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.Inventario.resources
+O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AMPrincipal.resources
+O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.UInventario.resources
+O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AInventario.resources

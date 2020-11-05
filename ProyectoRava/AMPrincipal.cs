@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace ProyectoRava
 {
-    public partial class UMPrincipal : Form
+    public partial class AMPrincipal : Form
     {
-        public UMPrincipal()
+        public AMPrincipal()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            UInventario inventario = new UInventario();
-            inventario.Show();
-            this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDesconectar_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Close();
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            AInventario inventario = new AInventario();
+            inventario.Show();
+            this.Hide();
         }
     }
 }

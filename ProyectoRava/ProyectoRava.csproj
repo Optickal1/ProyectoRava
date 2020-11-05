@@ -77,11 +77,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inventario.cs">
+    <Compile Include="AInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <Compile Include="AInventario.Designer.cs">
+      <DependentUpon>AInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AMPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AMPrincipal.Designer.cs">
+      <DependentUpon>AMPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UInventario.Designer.cs">
+      <DependentUpon>UInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -117,8 +129,14 @@
     <Compile Include="UMPrincipal.Designer.cs">
       <DependentUpon>UMPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <EmbeddedResource Include="AInventario.resx">
+      <DependentUpon>AInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMPrincipal.resx">
+      <DependentUpon>AMPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UInventario.resx">
+      <DependentUpon>UInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

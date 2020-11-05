@@ -11,9 +11,9 @@ using Npgsql;
 
 namespace ProyectoRava
 {
-    public partial class Inventario : Form
+    public partial class UInventario : Form
     {
-        public Inventario()
+        public UInventario()
         {
             InitializeComponent();
             //Datos de conexión a BD
