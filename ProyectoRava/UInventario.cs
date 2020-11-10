@@ -27,7 +27,8 @@ namespace ProyectoRava
             //No se que hace xd
             comm.CommandType = CommandType.Text;
             //Consulta
-            comm.CommandText = "SELECT * FROM Inventario";
+            comm.CommandText = 
+                "SELECT * FROM Inventario";
             //Leer BD
             NpgsqlDataReader dr = comm.ExecuteReader();
             if (dr.HasRows)//Si la tabla tiene 1 o más filas...
@@ -60,6 +61,12 @@ namespace ProyectoRava
         }
 
         private void btnIngreso_Click(object sender, EventArgs e)
+        {
+            InventarioIngreso inventarioIngreso = new InventarioIngreso();
+            inventarioIngreso.Show();
+        }
+
+        private void UInventario_Load(object sender, EventArgs e)
         {
 
         }

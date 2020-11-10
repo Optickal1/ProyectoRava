@@ -33,3 +33,4 @@ O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.csproj.
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AMPrincipal.resources
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.UInventario.resources
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AInventario.resources
+O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.InventarioIngreso.resources

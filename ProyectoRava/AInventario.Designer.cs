@@ -38,6 +38,7 @@
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnAgregarPA = new System.Windows.Forms.Button();
             this.btnEliminarPA = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Inventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +96,7 @@
             this.btnIngresoPA.TabIndex = 11;
             this.btnIngresoPA.Text = "Ingreso";
             this.btnIngresoPA.UseVisualStyleBackColor = false;
+            this.btnIngresoPA.Click += new System.EventHandler(this.btnIngresoPA_Click);
             // 
             // btnConsumoPA
             // 
@@ -142,12 +144,25 @@
             this.btnEliminarPA.Text = "Eliminar Producto";
             this.btnEliminarPA.UseVisualStyleBackColor = false;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(683, 26);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(105, 33);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // AInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnEliminarPA);
             this.Controls.Add(this.btnAgregarPA);
             this.Controls.Add(this.btnDesconectar);
@@ -176,5 +191,6 @@
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnAgregarPA;
         private System.Windows.Forms.Button btnEliminarPA;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

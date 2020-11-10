@@ -125,6 +125,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UInventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.UInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Inventario)).EndInit();
             this.ResumeLayout(false);
 

@@ -11,11 +11,16 @@ using Npgsql;
 
 namespace ProyectoRava
 {
-    public partial class AInventario : Form
+    public partial class InventarioIngreso : Form
     {
-        public AInventario()
+        public InventarioIngreso()
         {
             InitializeComponent();
+        }
+
+        private void InventarioIngreso_Load(object sender, EventArgs e)
+        {
+            //Datos de conexión a BD
             NpgsqlConnection conn = new NpgsqlConnection("Server = localhost; Port = 5432; User Id = postgres; Password = lalitoness12; Database = Rava_Sandwich");
             //Abrir BD
             conn.Open();
@@ -26,17 +31,13 @@ namespace ProyectoRava
             //No se que hace xd
             comm.CommandType = CommandType.Text;
             //Consulta
-            comm.CommandText = "SELECT * FROM Inventario";
+            comm.CommandText =
+                "SELECT p_name FROM Productos";
             //Leer BD
             NpgsqlDataReader dr = comm.ExecuteReader();
-            if (dr.HasRows)//Si la tabla tiene 1 o más filas...
+            while (dr.Read())//Si la tabla tiene 1 o más filas...
             {
-                //Crear objeto referente a la tabla
-                DataTable dt = new DataTable();
-                //Cargar Tabla
-                dt.Load(dr);
-                //Mostrar tabla
-                dGV_Inventario.DataSource = dt;
+                cBoxInventario.Items.Add(dr.GetString(0));
             }
             //Cerrar comandos
             comm.Dispose();
@@ -44,33 +45,19 @@ namespace ProyectoRava
             conn.Close();
         }
 
-        private void btnDesconectar_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
             this.Close();
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            AMPrincipal amp = new AMPrincipal();
-            amp.Show();
-            this.Close();
-        }
-
-        private void dGV_Inventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void cBoxInventario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnIngresoPA_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
-            InventarioIngreso inventarioIngreso = new InventarioIngreso();
-            inventarioIngreso.Show();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
+            //Datos de conexión a BD
             NpgsqlConnection conn = new NpgsqlConnection("Server = localhost; Port = 5432; User Id = postgres; Password = lalitoness12; Database = Rava_Sandwich");
             //Abrir BD
             conn.Open();
@@ -81,22 +68,21 @@ namespace ProyectoRava
             //No se que hace xd
             comm.CommandType = CommandType.Text;
             //Consulta
-            comm.CommandText = "SELECT * FROM Inventario";
+            comm.CommandText =
+                "Update Productos " +
+                "SET p_stock = " + NUPInventario.Value.ToString() + 
+                "WHERE p_name = '" + cBoxInventario.SelectedItem.ToString() + "'";
             //Leer BD
             NpgsqlDataReader dr = comm.ExecuteReader();
-            if (dr.HasRows)//Si la tabla tiene 1 o más filas...
-            {
-                //Crear objeto referente a la tabla
-                DataTable dt = new DataTable();
-                //Cargar Tabla
-                dt.Load(dr);
-                //Mostrar tabla
-                dGV_Inventario.DataSource = dt;
-            }
             //Cerrar comandos
             comm.Dispose();
             //Desconectar BD
             conn.Close();
+
+            MessageBox.Show(
+                "Se han agregado " + NUPInventario.Value.ToString() + 
+                " unidades al producto " + cBoxInventario.SelectedItem.ToString(), 
+                "Datos actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
         }
     }
 }
