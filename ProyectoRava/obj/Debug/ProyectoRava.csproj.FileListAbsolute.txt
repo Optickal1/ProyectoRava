@@ -34,3 +34,4 @@ O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AMPrinc
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.UInventario.resources
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AInventario.resources
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.InventarioIngreso.resources
+O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.InventarioConsumo.resources

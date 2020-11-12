@@ -89,6 +89,12 @@
     <Compile Include="AMPrincipal.Designer.cs">
       <DependentUpon>AMPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventarioConsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioConsumo.Designer.cs">
+      <DependentUpon>InventarioConsumo.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventarioIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AMPrincipal.resx">
       <DependentUpon>AMPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioConsumo.resx">
+      <DependentUpon>InventarioConsumo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventarioIngreso.resx">
       <DependentUpon>InventarioIngreso.cs</DependentUpon>

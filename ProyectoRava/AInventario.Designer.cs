@@ -44,6 +44,7 @@
             // 
             // btnVentas
             // 
+            this.btnVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVentas.BackColor = System.Drawing.Color.White;
             this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.Location = new System.Drawing.Point(12, 26);
@@ -55,6 +56,7 @@
             // 
             // btnCaja
             // 
+            this.btnCaja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCaja.BackColor = System.Drawing.Color.White;
             this.btnCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaja.Location = new System.Drawing.Point(113, 26);
@@ -66,6 +68,7 @@
             // 
             // dGV_Inventario
             // 
+            this.dGV_Inventario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dGV_Inventario.BackgroundColor = System.Drawing.Color.White;
             this.dGV_Inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_Inventario.Location = new System.Drawing.Point(12, 65);
@@ -76,6 +79,7 @@
             // 
             // btnAtras
             // 
+            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAtras.BackColor = System.Drawing.Color.White;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.Location = new System.Drawing.Point(12, 405);
@@ -88,6 +92,7 @@
             // 
             // btnIngresoPA
             // 
+            this.btnIngresoPA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresoPA.BackColor = System.Drawing.Color.Snow;
             this.btnIngresoPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresoPA.Location = new System.Drawing.Point(639, 225);
@@ -100,6 +105,7 @@
             // 
             // btnConsumoPA
             // 
+            this.btnConsumoPA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConsumoPA.BackColor = System.Drawing.Color.Snow;
             this.btnConsumoPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsumoPA.Location = new System.Drawing.Point(639, 305);
@@ -108,9 +114,11 @@
             this.btnConsumoPA.TabIndex = 12;
             this.btnConsumoPA.Text = "Consumo";
             this.btnConsumoPA.UseVisualStyleBackColor = false;
+            this.btnConsumoPA.Click += new System.EventHandler(this.btnConsumoPA_Click);
             // 
             // btnDesconectar
             // 
+            this.btnDesconectar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDesconectar.BackColor = System.Drawing.Color.Snow;
             this.btnDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesconectar.Location = new System.Drawing.Point(639, 405);
@@ -123,6 +131,7 @@
             // 
             // btnAgregarPA
             // 
+            this.btnAgregarPA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAgregarPA.BackColor = System.Drawing.Color.Snow;
             this.btnAgregarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarPA.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -135,6 +144,7 @@
             // 
             // btnEliminarPA
             // 
+            this.btnEliminarPA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminarPA.BackColor = System.Drawing.Color.Snow;
             this.btnEliminarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarPA.Location = new System.Drawing.Point(639, 145);
@@ -146,6 +156,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUpdate.BackColor = System.Drawing.Color.White;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(683, 26);

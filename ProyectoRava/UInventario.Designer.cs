@@ -36,85 +36,109 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnCaja = new System.Windows.Forms.Button();
             this.dGV_Inventario = new System.Windows.Forms.DataGridView();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Inventario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAtras
             // 
+            this.btnAtras.BackColor = System.Drawing.Color.White;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.Location = new System.Drawing.Point(12, 405);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(95, 33);
             this.btnAtras.TabIndex = 1;
             this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDesconectar
             // 
+            this.btnDesconectar.BackColor = System.Drawing.Color.White;
             this.btnDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesconectar.Location = new System.Drawing.Point(639, 405);
             this.btnDesconectar.Name = "btnDesconectar";
             this.btnDesconectar.Size = new System.Drawing.Size(149, 33);
             this.btnDesconectar.TabIndex = 2;
             this.btnDesconectar.Text = "Desconectar";
-            this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.UseVisualStyleBackColor = false;
             this.btnDesconectar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnIngresoPU
             // 
+            this.btnIngresoPU.BackColor = System.Drawing.Color.White;
             this.btnIngresoPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresoPU.Location = new System.Drawing.Point(639, 225);
             this.btnIngresoPU.Name = "btnIngresoPU";
             this.btnIngresoPU.Size = new System.Drawing.Size(149, 74);
             this.btnIngresoPU.TabIndex = 4;
             this.btnIngresoPU.Text = "Ingreso";
-            this.btnIngresoPU.UseVisualStyleBackColor = true;
+            this.btnIngresoPU.UseVisualStyleBackColor = false;
             this.btnIngresoPU.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // btnConsumoPU
             // 
+            this.btnConsumoPU.BackColor = System.Drawing.Color.White;
             this.btnConsumoPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsumoPU.Location = new System.Drawing.Point(639, 305);
             this.btnConsumoPU.Name = "btnConsumoPU";
             this.btnConsumoPU.Size = new System.Drawing.Size(149, 74);
             this.btnConsumoPU.TabIndex = 5;
             this.btnConsumoPU.Text = "Consumo";
-            this.btnConsumoPU.UseVisualStyleBackColor = true;
+            this.btnConsumoPU.UseVisualStyleBackColor = false;
+            this.btnConsumoPU.Click += new System.EventHandler(this.btnConsumoPU_Click);
             // 
             // btnVentas
             // 
+            this.btnVentas.BackColor = System.Drawing.Color.White;
             this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.Location = new System.Drawing.Point(12, 26);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(95, 33);
             this.btnVentas.TabIndex = 6;
             this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.UseVisualStyleBackColor = false;
             // 
             // btnCaja
             // 
+            this.btnCaja.BackColor = System.Drawing.Color.White;
             this.btnCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaja.Location = new System.Drawing.Point(113, 26);
             this.btnCaja.Name = "btnCaja";
             this.btnCaja.Size = new System.Drawing.Size(95, 33);
             this.btnCaja.TabIndex = 7;
             this.btnCaja.Text = "Caja";
-            this.btnCaja.UseVisualStyleBackColor = true;
+            this.btnCaja.UseVisualStyleBackColor = false;
             // 
             // dGV_Inventario
             // 
+            this.dGV_Inventario.BackgroundColor = System.Drawing.Color.White;
             this.dGV_Inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_Inventario.Location = new System.Drawing.Point(12, 65);
             this.dGV_Inventario.Name = "dGV_Inventario";
             this.dGV_Inventario.Size = new System.Drawing.Size(621, 314);
             this.dGV_Inventario.TabIndex = 10;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(683, 26);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(105, 33);
+            this.btnUpdate.TabIndex = 17;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // UInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dGV_Inventario);
             this.Controls.Add(this.btnCaja);
             this.Controls.Add(this.btnVentas);
@@ -139,5 +163,6 @@
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnCaja;
         private System.Windows.Forms.DataGridView dGV_Inventario;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
