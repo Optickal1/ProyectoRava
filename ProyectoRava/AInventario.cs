@@ -82,7 +82,7 @@ namespace ProyectoRava
             //No se que hace xd
             comm.CommandType = CommandType.Text;
             //Consulta
-            comm.CommandText = "SELECT * FROM Inventario";
+            comm.CommandText = "SELECT * FROM Inventario ORDER BY \"Nombre\" ASC";
             //Leer BD
             NpgsqlDataReader dr = comm.ExecuteReader();
             if (dr.HasRows)//Si la tabla tiene 1 o más filas...
@@ -98,6 +98,37 @@ namespace ProyectoRava
             comm.Dispose();
             //Desconectar BD
             conn.Close();
+        }
+
+        private void btnAgregarPA_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            if (Application.OpenForms[agregarProducto.Name] == null)
+            {
+                agregarProducto.Show();
+            }
+            else
+            {
+                Application.OpenForms[agregarProducto.Name].Activate();
+            }
+        }
+
+        private void btnEliminarPA_Click(object sender, EventArgs e)
+        {
+            EliminarProducto eliminarProducto = new EliminarProducto();
+            if (Application.OpenForms[eliminarProducto.Name] == null)
+            {
+                eliminarProducto.Show();
+            }
+            else
+            {
+                Application.OpenForms[eliminarProducto.Name].Activate();
+            }
+        }
+
+        private void AInventario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

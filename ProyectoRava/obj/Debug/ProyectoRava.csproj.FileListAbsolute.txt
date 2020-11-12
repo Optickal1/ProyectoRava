@@ -35,3 +35,5 @@ O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.UInvent
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AInventario.resources
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.InventarioIngreso.resources
 O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.InventarioConsumo.resources
+O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.AgregarProducto.resources
+O:\Documentos\Proyectos\ProyectoRava\ProyectoRava\obj\Debug\ProyectoRava.EliminarProducto.resources

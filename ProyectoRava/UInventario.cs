@@ -75,7 +75,7 @@ namespace ProyectoRava
             //No se que hace xd
             comm.CommandType = CommandType.Text;
             //Consulta
-            comm.CommandText = "SELECT * FROM Inventario";
+            comm.CommandText = "SELECT * FROM Inventario ORDER BY \"Nombre\" ASC";
             //Leer BD
             NpgsqlDataReader dr = comm.ExecuteReader();
             if (dr.HasRows)//Si la tabla tiene 1 o más filas...

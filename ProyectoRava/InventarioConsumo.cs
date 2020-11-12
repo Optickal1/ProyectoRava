@@ -28,7 +28,7 @@ namespace ProyectoRava
             comm.CommandType = CommandType.Text;
             //Consulta
             comm.CommandText =
-                "SELECT p_name FROM Productos";
+                "SELECT p_name FROM Productos ORDER BY p_name";
             //Leer BD
             NpgsqlDataReader dr = comm.ExecuteReader();
             while (dr.Read())//Si la tabla tiene 1 o más filas...

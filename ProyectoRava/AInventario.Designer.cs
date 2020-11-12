@@ -141,6 +141,7 @@
             this.btnAgregarPA.TabIndex = 14;
             this.btnAgregarPA.Text = "Agregar Producto";
             this.btnAgregarPA.UseVisualStyleBackColor = false;
+            this.btnAgregarPA.Click += new System.EventHandler(this.btnAgregarPA_Click);
             // 
             // btnEliminarPA
             // 
@@ -153,6 +154,7 @@
             this.btnEliminarPA.TabIndex = 15;
             this.btnEliminarPA.Text = "Eliminar Producto";
             this.btnEliminarPA.UseVisualStyleBackColor = false;
+            this.btnEliminarPA.Click += new System.EventHandler(this.btnEliminarPA_Click);
             // 
             // btnUpdate
             // 
@@ -186,6 +188,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AInventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.AInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGV_Inventario)).EndInit();
             this.ResumeLayout(false);
 
