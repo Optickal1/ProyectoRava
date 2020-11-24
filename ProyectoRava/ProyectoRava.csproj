@@ -113,6 +113,12 @@
     <Compile Include="InventarioIngreso.Designer.cs">
       <DependentUpon>InventarioIngreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal.Designer.cs">
+      <DependentUpon>Personal.cs</DependentUpon>
+    </Compile>
     <Compile Include="UInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventarioIngreso.resx">
       <DependentUpon>InventarioIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal.resx">
+      <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UInventario.resx">
       <DependentUpon>UInventario.cs</DependentUpon>

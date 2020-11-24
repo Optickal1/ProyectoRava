@@ -34,7 +34,6 @@
             this.btnCajaA = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnAddUsser = new System.Windows.Forms.Button();
-            this.btnRmvUsser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInventarioA
@@ -87,23 +86,13 @@
             // 
             this.btnAddUsser.BackColor = System.Drawing.Color.White;
             this.btnAddUsser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUsser.Location = new System.Drawing.Point(223, 257);
+            this.btnAddUsser.Location = new System.Drawing.Point(317, 260);
             this.btnAddUsser.Name = "btnAddUsser";
-            this.btnAddUsser.Size = new System.Drawing.Size(147, 79);
+            this.btnAddUsser.Size = new System.Drawing.Size(144, 79);
             this.btnAddUsser.TabIndex = 6;
-            this.btnAddUsser.Text = "Agregar Usuario";
+            this.btnAddUsser.Text = "Gestión Personal";
             this.btnAddUsser.UseVisualStyleBackColor = false;
-            // 
-            // btnRmvUsser
-            // 
-            this.btnRmvUsser.BackColor = System.Drawing.Color.White;
-            this.btnRmvUsser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRmvUsser.Location = new System.Drawing.Point(429, 257);
-            this.btnRmvUsser.Name = "btnRmvUsser";
-            this.btnRmvUsser.Size = new System.Drawing.Size(147, 79);
-            this.btnRmvUsser.TabIndex = 7;
-            this.btnRmvUsser.Text = "Eliminar Usuario";
-            this.btnRmvUsser.UseVisualStyleBackColor = false;
+            this.btnAddUsser.Click += new System.EventHandler(this.btnAddUsser_Click);
             // 
             // AMPrincipal
             // 
@@ -111,7 +100,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnRmvUsser);
             this.Controls.Add(this.btnAddUsser);
             this.Controls.Add(this.btnDesconectar);
             this.Controls.Add(this.btnCajaA);
@@ -130,6 +118,5 @@
         private System.Windows.Forms.Button btnCajaA;
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnAddUsser;
-        private System.Windows.Forms.Button btnRmvUsser;
     }
 }

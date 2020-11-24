@@ -37,14 +37,14 @@ namespace ProyectoRava
         {
             bool blnfound = false;//Booleano que indica la existencia de datos, por default es falso
             NpgsqlConnection connA = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=lalitoness12;Database=Rava_Sandwich");//Datos de conexion a la BD para Administrador
-            NpgsqlConnection connU = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=lalitoness12;Database=Rava_Sandwich");//Datos de conexion a la BD para Caja
+            NpgsqlConnection connU = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=lalitoness12;Database=Rava_Sandwich");//Datos de conexion a la BD para Usuario
             connA.Open();// Abre la BD para Administrador
-            connU.Open();// Abre la BD para Caja
+            connU.Open();// Abre la BD para Usuario
             
             NpgsqlCommand cmdA = new NpgsqlCommand("SELECT * FROM Usuarios WHERE rut='" + txtRut.Text + "' and pass = '" + txtPass.Text + "' and rol = 'Administrador'", connA);
-            NpgsqlCommand cmdU = new NpgsqlCommand("SELECT * FROM Usuarios WHERE rut='" + txtRut.Text + "' and pass = '" + txtPass.Text + "' and rol = 'caja'", connU);
+            NpgsqlCommand cmdU = new NpgsqlCommand("SELECT * FROM Usuarios WHERE rut='" + txtRut.Text + "' and pass = '" + txtPass.Text + "' and rol = 'Usuario'", connU);
             NpgsqlDataReader drA = cmdA.ExecuteReader();//Guarda los resultados de la consulta para Administrador
-            NpgsqlDataReader drU = cmdU.ExecuteReader();//Guarda los resultados de la consulta para Caja
+            NpgsqlDataReader drU = cmdU.ExecuteReader();//Guarda los resultados de la consulta para Usuario
 
             if (drA.Read())//Si hay datos
             {
@@ -57,8 +57,8 @@ namespace ProyectoRava
             if (drU.Read())//Si hay datos
             {
                 blnfound = true;//la existencia de datos es verdadera
-                UMPrincipal ump = new UMPrincipal(); //Crea un objeto del menú para Caja
-                ump.Show();// invoca la ventana del menú para Caja
+                UMPrincipal ump = new UMPrincipal(); //Crea un objeto del menú para Usuario
+                ump.Show();// invoca la ventana del menú para Usuario
                 this.Hide();//Oculta la ventana del login
             }
 

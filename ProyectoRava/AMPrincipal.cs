@@ -30,5 +30,12 @@ namespace ProyectoRava
             inventario.Show();
             this.Hide();
         }
+
+        private void btnAddUsser_Click(object sender, EventArgs e)
+        {
+            Personal personal = new Personal();
+            personal.Show();
+            this.Close();
+        }
     }
 }
