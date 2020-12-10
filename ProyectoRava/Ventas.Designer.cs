@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
             this.cBoxSelectPromo = new System.Windows.Forms.ComboBox();
             this.NUDPromo = new System.Windows.Forms.NumericUpDown();
             this.cBoxSelectAgregado4 = new System.Windows.Forms.ComboBox();
-            this.NUDBebida = new System.Windows.Forms.NumericUpDown();
-            this.cBoxSelectBebida = new System.Windows.Forms.ComboBox();
-            this.NUDVasos = new System.Windows.Forms.NumericUpDown();
+            this.NUDBebida1 = new System.Windows.Forms.NumericUpDown();
+            this.cBoxSelectBebida1 = new System.Windows.Forms.ComboBox();
+            this.NUDVasos1 = new System.Windows.Forms.NumericUpDown();
             this.btnAtras = new System.Windows.Forms.Button();
             this.cBoxSelectCarne2 = new System.Windows.Forms.ComboBox();
             this.cBoxSelectAgregado5 = new System.Windows.Forms.ComboBox();
@@ -71,18 +72,26 @@
             this.labelSelectAgregado7 = new System.Windows.Forms.Label();
             this.labelSelectAgregado8 = new System.Windows.Forms.Label();
             this.labelSelectBebida = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.txtVasos1 = new System.Windows.Forms.Label();
             this.labelSalsaS1 = new System.Windows.Forms.Label();
             this.labelExtraS2 = new System.Windows.Forms.Label();
             this.labelExtraS1 = new System.Windows.Forms.Label();
             this.labelSalsaS2 = new System.Windows.Forms.Label();
-            this.cBoxSelectExtraS1_2 = new System.Windows.Forms.ComboBox();
-            this.cBoxSelectExtraS2_2 = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.labelPrecio = new System.Windows.Forms.Label();
+            this.tBoxComentarios = new System.Windows.Forms.TextBox();
+            this.txtComentarios = new System.Windows.Forms.Label();
+            this.cBoxSelectBebida2 = new System.Windows.Forms.ComboBox();
+            this.NUDBebida2 = new System.Windows.Forms.NumericUpDown();
+            this.cBoxSelectBebida3 = new System.Windows.Forms.ComboBox();
+            this.NUDBebida3 = new System.Windows.Forms.NumericUpDown();
+            this.btnAgregarBebida = new System.Windows.Forms.Button();
+            this.tBoxExtras = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUDPromo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDVasos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDVasos1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida3)).BeginInit();
             this.SuspendLayout();
             // 
             // cBoxSelectPromo
@@ -102,6 +111,7 @@
             this.NUDPromo.Name = "NUDPromo";
             this.NUDPromo.Size = new System.Drawing.Size(43, 20);
             this.NUDPromo.TabIndex = 11;
+            this.NUDPromo.ValueChanged += new System.EventHandler(this.NUDPromo_ValueChanged);
             // 
             // cBoxSelectAgregado4
             // 
@@ -112,30 +122,33 @@
             this.cBoxSelectAgregado4.Size = new System.Drawing.Size(109, 21);
             this.cBoxSelectAgregado4.TabIndex = 19;
             // 
-            // NUDBebida
+            // NUDBebida1
             // 
-            this.NUDBebida.BackColor = System.Drawing.Color.White;
-            this.NUDBebida.Location = new System.Drawing.Point(12, 260);
-            this.NUDBebida.Name = "NUDBebida";
-            this.NUDBebida.Size = new System.Drawing.Size(43, 20);
-            this.NUDBebida.TabIndex = 21;
+            this.NUDBebida1.BackColor = System.Drawing.Color.White;
+            this.NUDBebida1.Location = new System.Drawing.Point(12, 260);
+            this.NUDBebida1.Name = "NUDBebida1";
+            this.NUDBebida1.Size = new System.Drawing.Size(43, 20);
+            this.NUDBebida1.TabIndex = 21;
+            this.NUDBebida1.ValueChanged += new System.EventHandler(this.NUDBebida1_ValueChanged);
             // 
-            // cBoxSelectBebida
+            // cBoxSelectBebida1
             // 
-            this.cBoxSelectBebida.BackColor = System.Drawing.Color.White;
-            this.cBoxSelectBebida.FormattingEnabled = true;
-            this.cBoxSelectBebida.Location = new System.Drawing.Point(61, 260);
-            this.cBoxSelectBebida.Name = "cBoxSelectBebida";
-            this.cBoxSelectBebida.Size = new System.Drawing.Size(121, 21);
-            this.cBoxSelectBebida.TabIndex = 22;
+            this.cBoxSelectBebida1.BackColor = System.Drawing.Color.White;
+            this.cBoxSelectBebida1.FormattingEnabled = true;
+            this.cBoxSelectBebida1.Location = new System.Drawing.Point(61, 260);
+            this.cBoxSelectBebida1.Name = "cBoxSelectBebida1";
+            this.cBoxSelectBebida1.Size = new System.Drawing.Size(121, 21);
+            this.cBoxSelectBebida1.TabIndex = 22;
+            this.cBoxSelectBebida1.SelectedIndexChanged += new System.EventHandler(this.cBoxSelectBebida_SelectedIndexChanged);
             // 
-            // NUDVasos
+            // NUDVasos1
             // 
-            this.NUDVasos.BackColor = System.Drawing.Color.White;
-            this.NUDVasos.Location = new System.Drawing.Point(61, 307);
-            this.NUDVasos.Name = "NUDVasos";
-            this.NUDVasos.Size = new System.Drawing.Size(43, 20);
-            this.NUDVasos.TabIndex = 23;
+            this.NUDVasos1.BackColor = System.Drawing.Color.White;
+            this.NUDVasos1.Location = new System.Drawing.Point(230, 261);
+            this.NUDVasos1.Name = "NUDVasos1";
+            this.NUDVasos1.Size = new System.Drawing.Size(43, 20);
+            this.NUDVasos1.TabIndex = 23;
+            this.NUDVasos1.ValueChanged += new System.EventHandler(this.NUDVasos_ValueChanged);
             // 
             // btnAtras
             // 
@@ -245,7 +258,7 @@
             // 
             this.cBoxSelectExtraS2_1.BackColor = System.Drawing.Color.White;
             this.cBoxSelectExtraS2_1.FormattingEnabled = true;
-            this.cBoxSelectExtraS2_1.Location = new System.Drawing.Point(818, 260);
+            this.cBoxSelectExtraS2_1.Location = new System.Drawing.Point(644, 259);
             this.cBoxSelectExtraS2_1.Name = "cBoxSelectExtraS2_1";
             this.cBoxSelectExtraS2_1.Size = new System.Drawing.Size(109, 21);
             this.cBoxSelectExtraS2_1.TabIndex = 36;
@@ -268,17 +281,18 @@
             this.btnAddPromo.TabIndex = 38;
             this.btnAddPromo.Text = "+";
             this.btnAddPromo.UseVisualStyleBackColor = false;
+            this.btnAddPromo.Click += new System.EventHandler(this.btnAddPromo_Click);
             // 
             // btnAddExtraS2
             // 
             this.btnAddExtraS2.BackColor = System.Drawing.Color.White;
-            this.btnAddExtraS2.Location = new System.Drawing.Point(762, 260);
+            this.btnAddExtraS2.Location = new System.Drawing.Point(588, 259);
             this.btnAddExtraS2.Name = "btnAddExtraS2";
             this.btnAddExtraS2.Size = new System.Drawing.Size(50, 40);
             this.btnAddExtraS2.TabIndex = 39;
             this.btnAddExtraS2.Text = "+";
             this.btnAddExtraS2.UseVisualStyleBackColor = false;
-            this.btnAddExtraS2.Click += new System.EventHandler(this.button4_Click);
+            this.btnAddExtraS2.Click += new System.EventHandler(this.btnAddExtraS2_Click);
             // 
             // btnAddExtraS1
             // 
@@ -289,6 +303,7 @@
             this.btnAddExtraS1.TabIndex = 40;
             this.btnAddExtraS1.Text = "+";
             this.btnAddExtraS1.UseVisualStyleBackColor = false;
+            this.btnAddExtraS1.Click += new System.EventHandler(this.btnAddExtraS1_Click);
             // 
             // chBoxMayonesaS1
             // 
@@ -338,7 +353,7 @@
             // 
             this.chBoxMayonesaS2.AutoSize = true;
             this.chBoxMayonesaS2.BackColor = System.Drawing.Color.Transparent;
-            this.chBoxMayonesaS2.Location = new System.Drawing.Point(761, 352);
+            this.chBoxMayonesaS2.Location = new System.Drawing.Point(587, 351);
             this.chBoxMayonesaS2.Name = "chBoxMayonesaS2";
             this.chBoxMayonesaS2.Size = new System.Drawing.Size(75, 17);
             this.chBoxMayonesaS2.TabIndex = 45;
@@ -349,7 +364,7 @@
             // 
             this.chBoxKetchupS2.AutoSize = true;
             this.chBoxKetchupS2.BackColor = System.Drawing.Color.Transparent;
-            this.chBoxKetchupS2.Location = new System.Drawing.Point(761, 375);
+            this.chBoxKetchupS2.Location = new System.Drawing.Point(587, 374);
             this.chBoxKetchupS2.Name = "chBoxKetchupS2";
             this.chBoxKetchupS2.Size = new System.Drawing.Size(66, 17);
             this.chBoxKetchupS2.TabIndex = 46;
@@ -360,7 +375,7 @@
             // 
             this.chBoxMostazaS2.AutoSize = true;
             this.chBoxMostazaS2.BackColor = System.Drawing.Color.Transparent;
-            this.chBoxMostazaS2.Location = new System.Drawing.Point(761, 398);
+            this.chBoxMostazaS2.Location = new System.Drawing.Point(587, 397);
             this.chBoxMostazaS2.Name = "chBoxMostazaS2";
             this.chBoxMostazaS2.Size = new System.Drawing.Size(66, 17);
             this.chBoxMostazaS2.TabIndex = 47;
@@ -371,7 +386,7 @@
             // 
             this.chBoxAjiS2.AutoSize = true;
             this.chBoxAjiS2.BackColor = System.Drawing.Color.Transparent;
-            this.chBoxAjiS2.Location = new System.Drawing.Point(761, 421);
+            this.chBoxAjiS2.Location = new System.Drawing.Point(587, 420);
             this.chBoxAjiS2.Name = "chBoxAjiS2";
             this.chBoxAjiS2.Size = new System.Drawing.Size(39, 17);
             this.chBoxAjiS2.TabIndex = 48;
@@ -382,7 +397,7 @@
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(257, 507);
+            this.btnConfirmar.Location = new System.Drawing.Point(646, 507);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(281, 73);
             this.btnConfirmar.TabIndex = 49;
@@ -510,15 +525,15 @@
             this.labelSelectBebida.TabIndex = 61;
             this.labelSelectBebida.Text = "Seleccione Bebestible";
             // 
-            // label13
+            // txtVasos1
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(12, 309);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 13);
-            this.label13.TabIndex = 62;
-            this.label13.Text = "Vasos";
+            this.txtVasos1.AutoSize = true;
+            this.txtVasos1.BackColor = System.Drawing.Color.Transparent;
+            this.txtVasos1.Location = new System.Drawing.Point(188, 259);
+            this.txtVasos1.Name = "txtVasos1";
+            this.txtVasos1.Size = new System.Drawing.Size(36, 13);
+            this.txtVasos1.TabIndex = 62;
+            this.txtVasos1.Text = "Vasos";
             // 
             // labelSalsaS1
             // 
@@ -534,7 +549,7 @@
             // 
             this.labelExtraS2.AutoSize = true;
             this.labelExtraS2.BackColor = System.Drawing.Color.Transparent;
-            this.labelExtraS2.Location = new System.Drawing.Point(765, 244);
+            this.labelExtraS2.Location = new System.Drawing.Point(591, 243);
             this.labelExtraS2.Name = "labelExtraS2";
             this.labelExtraS2.Size = new System.Drawing.Size(47, 13);
             this.labelExtraS2.TabIndex = 64;
@@ -554,34 +569,16 @@
             // 
             this.labelSalsaS2.AutoSize = true;
             this.labelSalsaS2.BackColor = System.Drawing.Color.Transparent;
-            this.labelSalsaS2.Location = new System.Drawing.Point(758, 336);
+            this.labelSalsaS2.Location = new System.Drawing.Point(584, 335);
             this.labelSalsaS2.Name = "labelSalsaS2";
             this.labelSalsaS2.Size = new System.Drawing.Size(54, 13);
             this.labelSalsaS2.TabIndex = 66;
             this.labelSalsaS2.Text = "Salsas S2";
             // 
-            // cBoxSelectExtraS1_2
-            // 
-            this.cBoxSelectExtraS1_2.BackColor = System.Drawing.Color.White;
-            this.cBoxSelectExtraS1_2.FormattingEnabled = true;
-            this.cBoxSelectExtraS1_2.Location = new System.Drawing.Point(473, 287);
-            this.cBoxSelectExtraS1_2.Name = "cBoxSelectExtraS1_2";
-            this.cBoxSelectExtraS1_2.Size = new System.Drawing.Size(109, 21);
-            this.cBoxSelectExtraS1_2.TabIndex = 67;
-            // 
-            // cBoxSelectExtraS2_2
-            // 
-            this.cBoxSelectExtraS2_2.BackColor = System.Drawing.Color.White;
-            this.cBoxSelectExtraS2_2.FormattingEnabled = true;
-            this.cBoxSelectExtraS2_2.Location = new System.Drawing.Point(818, 287);
-            this.cBoxSelectExtraS2_2.Name = "cBoxSelectExtraS2_2";
-            this.cBoxSelectExtraS2_2.Size = new System.Drawing.Size(109, 21);
-            this.cBoxSelectExtraS2_2.TabIndex = 68;
-            // 
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(15, 507);
+            this.txtPrecio.Location = new System.Drawing.Point(402, 507);
             this.txtPrecio.Multiline = true;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(224, 73);
@@ -591,11 +588,86 @@
             // 
             this.labelPrecio.AutoSize = true;
             this.labelPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecio.Location = new System.Drawing.Point(12, 473);
+            this.labelPrecio.Location = new System.Drawing.Point(403, 473);
             this.labelPrecio.Name = "labelPrecio";
             this.labelPrecio.Size = new System.Drawing.Size(83, 31);
             this.labelPrecio.TabIndex = 70;
             this.labelPrecio.Text = "Total:";
+            // 
+            // tBoxComentarios
+            // 
+            this.tBoxComentarios.Location = new System.Drawing.Point(15, 507);
+            this.tBoxComentarios.Multiline = true;
+            this.tBoxComentarios.Name = "tBoxComentarios";
+            this.tBoxComentarios.Size = new System.Drawing.Size(173, 73);
+            this.tBoxComentarios.TabIndex = 71;
+            // 
+            // txtComentarios
+            // 
+            this.txtComentarios.AutoSize = true;
+            this.txtComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComentarios.Location = new System.Drawing.Point(12, 473);
+            this.txtComentarios.Name = "txtComentarios";
+            this.txtComentarios.Size = new System.Drawing.Size(176, 31);
+            this.txtComentarios.TabIndex = 72;
+            this.txtComentarios.Text = "Comentarios:";
+            // 
+            // cBoxSelectBebida2
+            // 
+            this.cBoxSelectBebida2.BackColor = System.Drawing.Color.White;
+            this.cBoxSelectBebida2.FormattingEnabled = true;
+            this.cBoxSelectBebida2.Location = new System.Drawing.Point(61, 287);
+            this.cBoxSelectBebida2.Name = "cBoxSelectBebida2";
+            this.cBoxSelectBebida2.Size = new System.Drawing.Size(121, 21);
+            this.cBoxSelectBebida2.TabIndex = 74;
+            this.cBoxSelectBebida2.SelectedIndexChanged += new System.EventHandler(this.cBoxSelectBebida2_SelectedIndexChanged);
+            // 
+            // NUDBebida2
+            // 
+            this.NUDBebida2.BackColor = System.Drawing.Color.White;
+            this.NUDBebida2.Location = new System.Drawing.Point(12, 287);
+            this.NUDBebida2.Name = "NUDBebida2";
+            this.NUDBebida2.Size = new System.Drawing.Size(43, 20);
+            this.NUDBebida2.TabIndex = 73;
+            this.NUDBebida2.ValueChanged += new System.EventHandler(this.NUDBebida2_ValueChanged);
+            // 
+            // cBoxSelectBebida3
+            // 
+            this.cBoxSelectBebida3.BackColor = System.Drawing.Color.White;
+            this.cBoxSelectBebida3.FormattingEnabled = true;
+            this.cBoxSelectBebida3.Location = new System.Drawing.Point(61, 314);
+            this.cBoxSelectBebida3.Name = "cBoxSelectBebida3";
+            this.cBoxSelectBebida3.Size = new System.Drawing.Size(121, 21);
+            this.cBoxSelectBebida3.TabIndex = 77;
+            this.cBoxSelectBebida3.SelectedIndexChanged += new System.EventHandler(this.cBoxSelectBebida3_SelectedIndexChanged);
+            // 
+            // NUDBebida3
+            // 
+            this.NUDBebida3.BackColor = System.Drawing.Color.White;
+            this.NUDBebida3.Location = new System.Drawing.Point(12, 314);
+            this.NUDBebida3.Name = "NUDBebida3";
+            this.NUDBebida3.Size = new System.Drawing.Size(43, 20);
+            this.NUDBebida3.TabIndex = 76;
+            this.NUDBebida3.ValueChanged += new System.EventHandler(this.NUDBebida3_ValueChanged);
+            // 
+            // btnAgregarBebida
+            // 
+            this.btnAgregarBebida.BackColor = System.Drawing.Color.White;
+            this.btnAgregarBebida.Location = new System.Drawing.Point(12, 201);
+            this.btnAgregarBebida.Name = "btnAgregarBebida";
+            this.btnAgregarBebida.Size = new System.Drawing.Size(50, 40);
+            this.btnAgregarBebida.TabIndex = 81;
+            this.btnAgregarBebida.Text = "+";
+            this.btnAgregarBebida.UseVisualStyleBackColor = false;
+            this.btnAgregarBebida.Click += new System.EventHandler(this.btnAgregarBebida_Click);
+            // 
+            // tBoxExtras
+            // 
+            this.tBoxExtras.Location = new System.Drawing.Point(759, 259);
+            this.tBoxExtras.Multiline = true;
+            this.tBoxExtras.Name = "tBoxExtras";
+            this.tBoxExtras.Size = new System.Drawing.Size(168, 178);
+            this.tBoxExtras.TabIndex = 82;
             // 
             // Ventas
             // 
@@ -603,15 +675,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(939, 601);
+            this.Controls.Add(this.tBoxExtras);
+            this.Controls.Add(this.btnAgregarBebida);
+            this.Controls.Add(this.cBoxSelectBebida3);
+            this.Controls.Add(this.NUDBebida3);
+            this.Controls.Add(this.cBoxSelectBebida2);
+            this.Controls.Add(this.NUDBebida2);
+            this.Controls.Add(this.txtComentarios);
+            this.Controls.Add(this.tBoxComentarios);
             this.Controls.Add(this.labelPrecio);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.cBoxSelectExtraS2_2);
-            this.Controls.Add(this.cBoxSelectExtraS1_2);
             this.Controls.Add(this.labelSalsaS2);
             this.Controls.Add(this.labelExtraS1);
             this.Controls.Add(this.labelExtraS2);
             this.Controls.Add(this.labelSalsaS1);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtVasos1);
             this.Controls.Add(this.labelSelectBebida);
             this.Controls.Add(this.labelSelectAgregado8);
             this.Controls.Add(this.labelSelectAgregado7);
@@ -649,17 +727,20 @@
             this.Controls.Add(this.cBoxSelectAgregado5);
             this.Controls.Add(this.cBoxSelectCarne2);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.NUDVasos);
-            this.Controls.Add(this.cBoxSelectBebida);
-            this.Controls.Add(this.NUDBebida);
+            this.Controls.Add(this.NUDVasos1);
+            this.Controls.Add(this.cBoxSelectBebida1);
+            this.Controls.Add(this.NUDBebida1);
             this.Controls.Add(this.cBoxSelectAgregado4);
             this.Controls.Add(this.NUDPromo);
             this.Controls.Add(this.cBoxSelectPromo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ventas";
             this.Text = "Ventas";
             ((System.ComponentModel.ISupportInitialize)(this.NUDPromo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDVasos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDVasos1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDBebida3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -670,9 +751,9 @@
         private System.Windows.Forms.ComboBox cBoxSelectPromo;
         private System.Windows.Forms.NumericUpDown NUDPromo;
         private System.Windows.Forms.ComboBox cBoxSelectAgregado4;
-        private System.Windows.Forms.NumericUpDown NUDBebida;
-        private System.Windows.Forms.ComboBox cBoxSelectBebida;
-        private System.Windows.Forms.NumericUpDown NUDVasos;
+        private System.Windows.Forms.NumericUpDown NUDBebida1;
+        private System.Windows.Forms.ComboBox cBoxSelectBebida1;
+        private System.Windows.Forms.NumericUpDown NUDVasos1;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.ComboBox cBoxSelectCarne2;
         private System.Windows.Forms.ComboBox cBoxSelectAgregado5;
@@ -710,14 +791,20 @@
         private System.Windows.Forms.Label labelSelectAgregado7;
         private System.Windows.Forms.Label labelSelectAgregado8;
         private System.Windows.Forms.Label labelSelectBebida;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label txtVasos1;
         private System.Windows.Forms.Label labelSalsaS1;
         private System.Windows.Forms.Label labelExtraS2;
         private System.Windows.Forms.Label labelExtraS1;
         private System.Windows.Forms.Label labelSalsaS2;
-        private System.Windows.Forms.ComboBox cBoxSelectExtraS1_2;
-        private System.Windows.Forms.ComboBox cBoxSelectExtraS2_2;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label labelPrecio;
+        private System.Windows.Forms.TextBox tBoxComentarios;
+        private System.Windows.Forms.Label txtComentarios;
+        private System.Windows.Forms.ComboBox cBoxSelectBebida2;
+        private System.Windows.Forms.NumericUpDown NUDBebida2;
+        private System.Windows.Forms.ComboBox cBoxSelectBebida3;
+        private System.Windows.Forms.NumericUpDown NUDBebida3;
+        private System.Windows.Forms.Button btnAgregarBebida;
+        private System.Windows.Forms.TextBox tBoxExtras;
     }
 }
