@@ -15,6 +15,9 @@ namespace ProyectoRava
         public UMPrincipal()
         {
             InitializeComponent();
+
+            Login login = new Login();
+            txtName.Text = login.getNombre();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -28,6 +31,13 @@ namespace ProyectoRava
         {
             Login login = new Login();
             login.Show();
+            this.Close();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            ventas.Show();
             this.Close();
         }
     }

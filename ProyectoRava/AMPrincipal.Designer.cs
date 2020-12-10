@@ -34,6 +34,8 @@
             this.btnCajaA = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnAddUsser = new System.Windows.Forms.Button();
+            this.txtHola = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnInventarioA
@@ -58,6 +60,7 @@
             this.btnVentasA.TabIndex = 3;
             this.btnVentasA.Text = "Ventas";
             this.btnVentasA.UseVisualStyleBackColor = false;
+            this.btnVentasA.Click += new System.EventHandler(this.btnVentasA_Click);
             // 
             // btnCajaA
             // 
@@ -94,12 +97,34 @@
             this.btnAddUsser.UseVisualStyleBackColor = false;
             this.btnAddUsser.Click += new System.EventHandler(this.btnAddUsser_Click);
             // 
+            // txtHola
+            // 
+            this.txtHola.AutoSize = true;
+            this.txtHola.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHola.Location = new System.Drawing.Point(102, 55);
+            this.txtHola.Name = "txtHola";
+            this.txtHola.Size = new System.Drawing.Size(70, 31);
+            this.txtHola.TabIndex = 7;
+            this.txtHola.Text = "Hola";
+            // 
+            // txtName
+            // 
+            this.txtName.AutoSize = true;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(186, 55);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(23, 31);
+            this.txtName.TabIndex = 8;
+            this.txtName.Text = "-";
+            // 
             // AMPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtHola);
             this.Controls.Add(this.btnAddUsser);
             this.Controls.Add(this.btnDesconectar);
             this.Controls.Add(this.btnCajaA);
@@ -109,6 +134,7 @@
             this.Name = "AMPrincipal";
             this.Text = "Menú Principal";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,5 +144,7 @@
         private System.Windows.Forms.Button btnCajaA;
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnAddUsser;
+        private System.Windows.Forms.Label txtHola;
+        private System.Windows.Forms.Label txtName;
     }
 }

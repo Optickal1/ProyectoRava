@@ -15,6 +15,9 @@ namespace ProyectoRava
         public AMPrincipal()
         {
             InitializeComponent();
+
+            Login login = new Login();
+            txtName.Text = login.getNombre();
         }
 
         private void btnDesconectar_Click(object sender, EventArgs e)
@@ -35,6 +38,13 @@ namespace ProyectoRava
         {
             Personal personal = new Personal();
             personal.Show();
+            this.Close();
+        }
+
+        private void btnVentasA_Click(object sender, EventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            ventas.Show();
             this.Close();
         }
     }

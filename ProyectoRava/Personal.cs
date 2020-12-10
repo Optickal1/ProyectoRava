@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Npgsql;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace ProyectoRava
 {
@@ -92,6 +86,53 @@ namespace ProyectoRava
             comm.Dispose();
             //Desconectar BD
             conn.Close();
+        }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            //Datos de conexión a BD
+            NpgsqlConnection conn = new NpgsqlConnection("Server = localhost; Port = 5432; User Id = postgres; Password = lalitoness12; Database = Rava_Sandwich");
+            //Abrir BD
+            conn.Open();
+            //Crear objeto de comandos
+            NpgsqlCommand comm = new NpgsqlCommand();
+            //Crear objeto conexión
+            comm.Connection = conn;
+            //No se que hace xd
+            comm.CommandType = CommandType.Text;
+            //Consulta
+            comm.CommandText =
+                "DELETE FROM Usuarios " +
+                "WHERE nombre = '" + cBoxPersonal.SelectedItem.ToString() + "'";
+
+            DialogResult dialogResult = MessageBox.Show(
+                "¿Eliminar " + cBoxPersonal.SelectedItem.ToString() + "?",
+                "Eliminar Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //Ejecutar DELETE
+                NpgsqlDataReader dr = comm.ExecuteReader();
+                //Cerrar comandos
+                comm.Dispose();
+                //Desconectar BD
+                conn.Close();
+                MessageBox.Show(
+                    "El usuario " + cBoxPersonal.SelectedItem.ToString() + " se ha eliminado con éxito",
+                    "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                Personal amp = new Personal();
+                amp.Show();
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //Cerrar comandos
+                comm.Dispose();
+                //Desconectar BD
+                conn.Close();
+                MessageBox.Show(
+                    "Operación cancelada",
+                    "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            }
         }
     }
 }

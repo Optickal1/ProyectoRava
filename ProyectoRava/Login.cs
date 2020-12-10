@@ -13,6 +13,8 @@ namespace ProyectoRava
 {
     public partial class Login : Form
     {
+        static String nombre = "";
+        static String rol = "";
         public Login()
         {
             InitializeComponent();
@@ -48,18 +50,25 @@ namespace ProyectoRava
 
             if (drA.Read())//Si hay datos
             {
+                nombre = drA.GetString(1);
+                rol = drA.GetString(3);
                 blnfound = true;//la existencia de datos es verdadera
                 AMPrincipal amp = new AMPrincipal(); //Crea un objeto del menú para Administrador
                 amp.Show();// invoca la ventana del menú para Administrador
                 this.Hide();//Oculta la ventana del login
+
             }
+
 
             if (drU.Read())//Si hay datos
             {
+                nombre = drU.GetString(1);
+                rol = drU.GetString(3);
                 blnfound = true;//la existencia de datos es verdadera
                 UMPrincipal ump = new UMPrincipal(); //Crea un objeto del menú para Usuario
                 ump.Show();// invoca la ventana del menú para Usuario
                 this.Hide();//Oculta la ventana del login
+
             }
 
             if (blnfound == false && blnfound == false)//si no se encuentra
@@ -74,6 +83,16 @@ namespace ProyectoRava
                 connU.Close();
             }
         }
+        public String getNombre()
+        {
+            return nombre;
+        }
+
+        public String getRol()
+        {
+            return rol;
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
 
